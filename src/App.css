@@ -1,0 +1,279 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #40E0D0 0%, #20B2AA 50%, #008B8B 100%);
+  /* Safari support for backdrop-filter */
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Modern forced-colors support - replacing -ms-high-contrast */
+@media (forced-colors: active) {
+  .App {
+    background: #008B8B;
+  }
+  
+  .MuiButton-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiIconButton-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiPaper-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiContainer-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiBox-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTypography-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTextField-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiDialog-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTable-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTableRow-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTableCell-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTabs-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiTab-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiAlert-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiSnackbar-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiChip-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiGrid-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiFormControl-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiInputLabel-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiSelect-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiMenuItem-root {
+    forced-color-adjust: none;
+  }
+  
+  .MuiAutocomplete-root {
+    forced-color-adjust: none;
+  }
+}
+
+/* Light theme support for forced-colors */
+@media (forced-colors: active) and (prefers-color-scheme: light) {
+  .App {
+    background: #40E0D0;
+  }
+}
+
+/* Dark theme support for forced-colors */
+@media (forced-colors: active) and (prefers-color-scheme: dark) {
+  .App {
+    background: #008B8B;
+  }
+}
+
+/* Fix for print color adjust - improved browser support */
+@media print {
+  * {
+    /* Chrome/Edge support */
+    -webkit-print-color-adjust: exact !important;
+    /* Firefox support */
+    color-adjust: exact !important;
+    /* Standard property */
+    print-color-adjust: exact !important;
+  }
+  
+  /* Additional print styles for better compatibility */
+  .MuiButton-root,
+  .MuiIconButton-root,
+  .MuiTab-root {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
+
+/* Accessibility improvements */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4CAF50;
+  outline-offset: 2px;
+}
+
+/* Ensure proper contrast for text */
+.MuiTypography-root {
+  color: inherit;
+}
+
+/* Fix for Material-UI components */
+.MuiButton-root {
+  position: relative;
+}
+
+.MuiIconButton-root {
+  position: relative;
+}
+
+/* Material-UI componentlerinin daha iyi görünmesi için */
+.MuiPaper-root {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.MuiCard-root {
+  transition: transform 0.2s ease-in-out;
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive tasarım için */
+@media (max-width: 768px) {
+  .MuiContainer-root {
+    padding: 16px !important;
+  }
+  
+  .MuiTabs-root {
+    overflow-x: auto;
+  }
+  
+  .MuiTab-root {
+    min-width: auto !important;
+    padding: 8px 12px !important;
+    font-size: 0.875rem !important;
+  }
+  
+  .MuiButton-root {
+    font-size: 0.875rem !important;
+    padding: 8px 16px !important;
+  }
+  
+  .MuiCard-root {
+    margin-bottom: 16px !important;
+  }
+  
+  .MuiFab-root {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  
+  /* Driver app specific mobile styles */
+  .driver-app-container {
+    padding: 8px !important;
+  }
+  
+  .driver-order-card {
+    margin-bottom: 12px !important;
+  }
+  
+  .driver-action-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .driver-action-buttons .MuiButton-root {
+    width: 100% !important;
+  }
+}
+
+/* Touch-friendly buttons for mobile */
+@media (hover: none) and (pointer: coarse) {
+  .MuiButton-root {
+    min-height: 44px !important;
+  }
+  
+  .MuiIconButton-root {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  .MuiFab-root {
+    min-width: 56px !important;
+    min-height: 56px !important;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .driver-app-container {
+    padding: 4px !important;
+  }
+  
+  .driver-order-card {
+    margin-bottom: 8px !important;
+  }
+}
+
+/* Smooth animations */
+.MuiButton-root {
+  transition: all 0.3s ease !important;
+}
+
+.MuiTextField-root {
+  transition: all 0.3s ease !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

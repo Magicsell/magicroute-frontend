@@ -26,7 +26,6 @@ import {
 
 // Helper function to get API URL
 const getApiUrl = () => {
-  // For local development
   const isIPhone = /iPad|iPhone|iPod/.test(navigator.userAgent);
   const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
   
@@ -36,7 +35,7 @@ const getApiUrl = () => {
     return `http://${currentHost}:5000`;
   } else {
                 return process.env.NODE_ENV === 'production' 
-        ? 'https://magicroute-backend.vercel.app' // Backend'in ayrı proje URL'si
+        ? 'https://api.magicroute.co.uk' // Yeni API subdomain
         : 'http://localhost:5001';
   }
 };

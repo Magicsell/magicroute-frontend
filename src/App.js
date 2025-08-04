@@ -146,12 +146,11 @@ function App() {
 
   // Helper function to get API URL
   const getApiUrl = () => {
-    // For iPhone testing, use computer's IP address
     const isIPhone = /iPad|iPhone|iPod/.test(navigator.userAgent);
     const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
     
     if (process.env.NODE_ENV === 'production') {
-      return 'https://magicroute-backend.vercel.app'; // Backend'in ayrı proje URL'si
+      return 'https://api.magicroute.co.uk'; // Yeni API subdomain
     } else if (isIPhone && !isLocalhost) {
       // iPhone accessing via IP address
       const currentHost = window.location.hostname;
@@ -206,7 +205,7 @@ function App() {
 
   useEffect(() => {
     const apiUrl = process.env.NODE_ENV === 'production' 
-      ? 'https://magicroute-backend.vercel.app' // Backend'in ayrı proje URL'si
+      ? 'https://api.magicroute.co.uk' // Yeni API subdomain
       : 'http://localhost:5001';
     
     const newSocket = io(apiUrl);
